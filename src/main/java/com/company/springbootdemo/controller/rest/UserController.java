@@ -55,8 +55,12 @@ public class UserController {
         return "User ID: " + userId + " uploaded " + bytes.length + " bytes";
     }
 
-    @RequestMapping(value="get/{id}")
-    public User getUser(@PathVariable("id") long id) {
-        return userService.getUser(id);
+    @RequestMapping(
+        value="get/{id}",
+        method=RequestMethod.GET
+    )
+    public User getUser(@PathVariable("id") Long id) {
+        User user = userService.getUser(id);
+        return user;
     }
 }
