@@ -18,7 +18,7 @@ public class UserController {
     @Autowired
     UserService userService;
 
-    private static final SimpleDateFormat BIRTHDAY_TEXT_FORMAT = new SimpleDateFormat("YYYYMMdd");
+    private static final SimpleDateFormat BIRTHDAY_TEXT_FORMAT = new SimpleDateFormat("yyyyMMdd");
 
     @RequestMapping(value="/new", method=RequestMethod.POST)
     public User add(
