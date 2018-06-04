@@ -28,4 +28,9 @@ public class UserServiceImpl implements
     public void deleteUser(User user) {
         userRepository.deleteById(user.getId());
     }
+
+    @Override
+    public User getUser(long id) {
+        return userRepository.getOne(id);
+    }
 }

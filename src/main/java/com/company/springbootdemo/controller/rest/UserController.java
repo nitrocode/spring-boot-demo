@@ -54,4 +54,9 @@ public class UserController {
     public String picture(@PathVariable("userId") int userId, @RequestBody byte[] bytes) {
         return "User ID: " + userId + " uploaded " + bytes.length + " bytes";
     }
+
+    @RequestMapping(value="get/{id}")
+    public User getUser(@PathVariable("id") long id) {
+        return userService.getUser(id);
+    }
 }
