@@ -61,7 +61,7 @@ public class UserController {
     }
 
     @RequestMapping(
-        value="get/{id}",
+        value="/{id}",
         method=RequestMethod.GET
     )
     public User getUser(@PathVariable("id") Long id) {
