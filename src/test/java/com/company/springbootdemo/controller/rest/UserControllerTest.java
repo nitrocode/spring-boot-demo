@@ -59,11 +59,6 @@ public class UserControllerTest {
 
     @Test
     public void add() throws Exception {
-        mockMvc.perform(
-            get("/users/0")
-              .contentType(JSON_CONTEXT_TYPE)
-            ).andExpect(status().isOk()
-        );
     }
 
     @Test
@@ -71,6 +66,11 @@ public class UserControllerTest {
     }
 
     @Test
-    public void getUser() {
+    public void getUser() throws Exception {
+        mockMvc.perform(
+            get("/users/0")
+                .contentType(JSON_CONTEXT_TYPE)
+            ).andExpect(status().isOk()
+        );
     }
 }
