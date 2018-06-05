@@ -1,5 +1,6 @@
 package com.company.springbootdemo.data.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -21,6 +22,7 @@ public class User {
     private String lastName;
 
     @Column
+    @JsonFormat(pattern = "MMddyyyy")
     private Date birthday;
 
     public User() {
