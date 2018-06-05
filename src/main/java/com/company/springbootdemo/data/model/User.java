@@ -23,6 +23,16 @@ public class User {
     @Column
     private Date birthday;
 
+    public User() {
+
+    }
+
+    public User(String first, String last, Date birthday) {
+        this.firstName = first;
+        this.lastName = last;
+        this.birthday = birthday;
+    }
+
     public Long getId() {
         return id;
     }
