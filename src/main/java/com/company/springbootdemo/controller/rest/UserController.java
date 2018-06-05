@@ -15,8 +15,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping(value="/users")
 public class UserController {
-    @Autowired
+
     UserService userService;
+
+    @Autowired
+    public void UserController(UserService userService) {
+        this.userService = userService;
+    }
 
     private static final SimpleDateFormat BIRTHDAY_TEXT_FORMAT = new SimpleDateFormat("yyyyMMdd");
 
